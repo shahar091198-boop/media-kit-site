@@ -1,0 +1,43 @@
+:root {
+  /* ---- Colors (sampled directly from the PDF) ---- */
+  --color-bg: #FFFEFD;
+  --color-bg-panel: #F3EEE8;
+  --color-bg-panel-alt: #F0ECEA;
+  --color-bg-pill: #FFFAF5;
+  --color-ink: #000000;
+  --color-heading: #404040;
+  --color-body: #2A2A2A;
+  --color-border: #1a1a1a;
+  --color-white: #FFFFFF;
+
+  /* ---- Typography ----
+     Original PDF fonts: "The Seasons" (display serif) and "TT Norms Pro" (UI sans)
+     are commercial fonts without a redistribution license, so this build uses
+     close, freely-licensed look-alikes. Both families below have full Hebrew +
+     Latin glyph sets, so the same variable works for both scripts without a
+     separate Hebrew fallback stack. Swap these if a licensed webfont becomes
+     available later. */
+  --font-display: 'Frank Ruhl Libre', 'Cardo', Georgia, serif;
+  --font-ui: 'Heebo', -apple-system, sans-serif;
+  --font-hebrew-display: 'Frank Ruhl Libre', 'Cardo', serif;
+  --font-hebrew-body: 'Heebo', -apple-system, sans-serif;
+
+  /* ---- Radii ---- */
+  --radius-sm: 12px;
+  --radius-md: 22px;
+  --radius-lg: 34px;
+  --radius-pill: 999px;
+
+  /* ---- Spacing (tightened vertical rhythm) ---- */
+  --space-xs: 8px;
+  --space-sm: 14px;
+  --space-md: 20px;
+  --space-lg: 30px;
+  --space-xl: 48px;
+  --space-2xl: 68px;
+
+  /* ---- Layout ---- */
+  --content-max: 1200px;
+  --border-w: 1.5px;
+  --nav-height: 76px;
+}

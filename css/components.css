@@ -1,0 +1,352 @@
+/* ============ Stat circles (Home) ============ */
+.stat-circles {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  direction: ltr; /* preserve the left-to-right stat order from the PDF */
+}
+
+.stat-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 96px;
+  text-align: center;
+}
+
+.stat-circle__value {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: var(--border-w) solid var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.stat-circle__label {
+  font-size: 0.72rem;
+  color: var(--color-body);
+}
+
+/* ============ Profile links row (Home) ============ */
+.profile-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  direction: ltr;
+}
+
+.profile-links li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding: 0 var(--space-xl);
+  border-inline-start: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.profile-links li:first-child {
+  border-inline-start: none;
+  padding-inline-start: 0;
+}
+
+.profile-links li:last-child {
+  padding-inline-end: 0;
+}
+
+.profile-links a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.profile-links__count {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.profile-links__label {
+  color: var(--color-body);
+  font-size: 0.85rem;
+}
+
+/* ============ Stat cards (Reach sections) ============ */
+.stat-cards {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  padding: 0 var(--space-lg);
+  margin-top: -70px;
+  position: relative;
+  flex-wrap: wrap;
+  direction: ltr;
+}
+
+.stat-card {
+  background: var(--color-bg-panel-alt);
+  border: var(--border-w) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-md);
+  min-width: 180px;
+  flex: 1 1 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.stat-card__label {
+  font-weight: 600;
+}
+
+.stat-card__sub {
+  font-size: 0.8rem;
+  color: var(--color-body);
+}
+
+/* ============ Portfolio cards ============ */
+.portfolio-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: stretch;
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--color-bg-pill);
+  border: var(--border-w) solid rgba(0, 0, 0, 0.18);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px -28px rgba(0, 0, 0, 0.3);
+  direction: ltr; /* lock the left/right zigzag positions from the PDF */
+}
+
+.portfolio-card__media {
+  order: 1;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  max-height: 480px;
+}
+
+.portfolio-card__content {
+  order: 2;
+  direction: rtl;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.portfolio-card--reverse {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.portfolio-card--reverse .portfolio-card__media {
+  order: 2;
+}
+
+.portfolio-card--reverse .portfolio-card__content {
+  order: 1;
+}
+
+.portfolio-card__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card__media:hover img {
+  transform: scale(1.04);
+}
+
+.portfolio-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-ink);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+
+.portfolio-card__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-body);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.portfolio-card__index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--color-ink);
+  letter-spacing: 0;
+}
+
+.portfolio-card__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+.portfolio-card__desc {
+  color: var(--color-body);
+  line-height: 1.65;
+  font-size: 0.92rem;
+}
+
+.portfolio-card__stats {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  direction: ltr;
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card__stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+  color: var(--color-ink);
+}
+
+.portfolio-card__stats strong {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.portfolio-card__stats span {
+  font-size: 0.75rem;
+  color: var(--color-body);
+}
+
+/* ============ Case study insight metrics ============ */
+.case-study__insights li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.case-study__insights strong {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+}
+
+.case-study__insights span {
+  color: var(--color-body);
+  font-size: 0.85rem;
+}
+
+.case-study__insights-note {
+  color: var(--color-body);
+  font-size: 0.7rem;
+}
+
+/* ============ Phone mockup (episode data) ============ */
+.phone-mock {
+  width: 100%;
+}
+
+.phone-mock img {
+  width: 100%;
+  aspect-ratio: 9 / 18;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-md);
+  border: 4px solid var(--color-ink);
+}
+
+.phone-mock figcaption {
+  text-align: center;
+  margin-top: var(--space-xs);
+  font-weight: 600;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+/* ============ Video modal / lightbox ============ */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal[hidden] {
+  display: none;
+}
+
+.video-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 18, 16, 0.85);
+}
+
+.video-modal__panel {
+  position: relative;
+  width: min(92vw, 420px);
+  aspect-ratio: 9/16;
+  background: #000;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-modal__frame,
+.video-modal__frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-modal__close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink);
+}
