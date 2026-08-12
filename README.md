@@ -31,12 +31,24 @@ python3 -m http.server 8811
 
 ואז פותחים בדפדפן: `http://localhost:8811`
 
-## איך מפרסמים ל-GitHub Pages
+## פרסום — פרטי האתר החי
 
-1. יוצרים repository חדש ב-GitHub (למשל `media-kit`).
-2. מעלים את כל התוכן של התיקייה `media-kit-site` ל-repository (כולל `index.html` בשורש).
-3. ב-Settings → Pages בוחרים את הענף (branch) הראשי כמקור.
-4. האתר יעלה בכתובת `https://<username>.github.io/<repo-name>/`.
+- **Repository:** https://github.com/shahar091198-boop/media-kit-site
+- **אתר חי (GitHub Pages):** https://shahar091198-boop.github.io/media-kit-site/
+- הענף `main` מוגדר כמקור ל-GitHub Pages (Settings → Pages), מהתיקייה השורש (`/`).
+
+### איך מפרסמים שינויים חדשים
+
+אחרי שעורכים קבצים מקומית (למשל דרך Claude Code) ובודקים שהכול נראה טוב:
+
+```bash
+cd ~/media-kit-site
+git add -A
+git commit -m "תיאור קצר של השינוי"
+git push
+```
+
+תוך דקה-שתיים GitHub Pages בונה מחדש את האתר אוטומטית מהענף `main`, והשינויים מופיעים בכתובת החיה. אין צורך בשום צעד נוסף (אין build step).
 
 ---
 
